@@ -1,0 +1,241 @@
+/*
+<LICENSE>
+
+This file is part of AGENCY.
+
+AGENCY is Copyright (c) 2003-2009 by Ken Tanzer and Downtown Emergency
+Service Center (DESC).
+
+All rights reserved.
+
+For more information about AGENCY, see http://agency.sourceforge.net/
+For more information about DESC, see http://www.desc.org/.
+
+AGENCY is free software: you can redistribute it and/or modify
+it under the terms of version 3 of the GNU General Public License
+as published by the Free Software Foundation.
+
+AGENCY is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with CHASERS.  If not, see <http://www.gnu.org/licenses/>.
+
+For additional information, see the README.copyright file that
+should be included in this distribution.
+
+</LICENSE>
+*/
+
+#printerFriendlyCancel { display: none; }
+
+/* colors
+	staff #dfffdf
+
+
+*/
+
+
+/* global styles here */
+
+
+/* General Classes */
+.agencyPrintOnly { display: none; }
+a.fancyLink { text-decoration: none; }
+a.fancyLink:hover, a.fancyLink:active { color: #f00; text-decoration: underline; }
+
+a.toggleLink { font-size: 65%; }
+div.engineMessageResultDetail { font-size: 80%; border: solid 1px black; }
+div.hiddenDetail { font-size: 70%; background-color: #FFDDDD; }
+
+.warning, .error { color: #f00; } /* same for now */
+.message { color: #18782f; }
+
+.staff { background-color: #dfffdf; }
+.staffLink { color: red; }
+
+.inactive { color: #7f7f7f; text-decoration: line-through; }
+
+.donor { background-color: #ffffcd; }
+.client { background-color: #ffffcd; }
+.info { background-color: #eff9ff; }
+
+.iandr { background-color: #ffdeff; }
+.log { background-color: #deffff; }
+
+.sage { background-color: #bb2349; }
+.host { background-color: #289a44; }
+.pact { background-color: #cc3300; }
+
+.alertMark { color: #f00; }
+
+.textHeader { background-color: #c5dbff; }
+
+.mapLink {  }
+
+.generalTable { background-color: #ffffee; }
+
+.systemField { background-color: #eee; }
+
+.agencyHelp { background-color: #ccedff; 
+	border: solid 1px black;
+	width: 65%;
+	padding: 10px;
+	margin: 10px;
+	}
+
+.future { background-color: #83aeac; }
+.past { background-color: #9cb6d5; }
+
+.floatingBox {
+	background-color: #fff; 
+	border: solid 2px #0000aa; 
+	padding: 15px; 
+	white-space: normal;
+	overflow: auto;
+}
+
+/* mainly for staff alerts */
+tr.staffData1 { background-color: #dff5df; }
+tr.staffData2 { background-color: #cff2cf; }
+
+/* things like .client and .staff will go here */
+/* also, .engine, which will be overridden per object if specified -- allowing for different data themes */
+/* Client Notes */
+.clientCommentDate { background-color: #acf; }
+.clientCommentNote { background-color: #efefef; }
+.clientCommentFlag { color: #f00; }
+
+/* Engine */
+td.listControl { color: #fff; }
+input.listControl, select.listControl { background-color: #fff; }
+input.listControl[type=submit] { background-color: #efefef; border: solid 1px black; }
+.listSubHeader { background-color: #ffffee; }
+tr.generalData1 {  background-color: #ffffee; }
+tr.generalData2 {  background-color: #e6e6cd; }
+/* uncomment line below for row-highlighting on mouseover */
+/* tr.generalData1:hover,tr.generalData2:hover { background-color: #999988; color:#fff; } */
+tr.generalDataError,td.generalDataError {  color: #fff; background-color: #f00; }
+tr.listTotals {background-color :#9a9bc0; color:#fff; }
+
+table.engineForm { background-color: #ffffee; }
+tr.engineFormSelected { background-color: #1BEDDF; }
+.engineFormError { background-color: #ffbbbb; color: red; font-weight: bold; }
+
+#engineMenu { background-color: #fff; }
+#engineMenu span { background-color: #bebebe; }
+
+.append_only { background-color: #b2d0ff; 
+	padding: 5px;
+	border: solid 1px #efefef;
+}
+
+/* End Engine */
+
+/* Widget */
+
+.widgetChanged { background-color: #92c4ef; }
+.widgetNoChange { background-color: #85ab5c; }
+.widgetNew { background-color: #aeef5e; }
+.widgetNone { background-color: #efefef; color: #444;}
+
+/* Revision History */
+.revision_history { color: #224; background-color: #ccc; }
+.revision_history_diff { color: #fff; background-color: #ff3335; }
+.revision_history_same { background-color: #eee; color: #224; }
+/* End Revision History */
+
+/* Client/Staff Child Records */
+/* Currently no non-layout style... */
+/* End Client/Staff Child Records */
+
+/* custom ID blocks */
+
+/* top menus and such */
+
+#homeMenu { text-align: center; }
+#homePageTitle { font-size: 160%; font-weight: bold; }
+
+#agencySuperUser form { display: inline; margin: 0px; }
+
+#agencySuperUser span, #agencySuperUser input, #agencySuperUser select{ font-size: 70%; }
+
+#agencyTopLoginBox { margin: 1px; background-color: #dfffdf; width: 70px;}
+#agencyTopLoginBox span { font-size: 65%; font-weight: bold; }
+#agencyTopLoginBox input { margin: 1px; font-size: 65%; border: 1px solid #000; display: block; }
+#agencyTopLoginBox input[type=text], #agencyTopLoginBox input[type=password] {  width: 65px; }
+#agencyTopLoginBox input[type=hidden] { display: none; }
+
+a.calTodayLink,a.calNowLink { font-size: 65%; vertical-align: bottom; }
+.clockButton { vertical-align: text-bottom; }
+
+#mainCalendar {
+	border: solid 2px #0f0f00;
+	background-color: #efefef;
+	padding: 10px;
+	display: none;
+	position: absolute;
+}
+
+#mainCalendar span a { font-size: 75%; text-decoration: none; margin-right: 10px;}
+
+#engineStaffAlertForm {
+	border: solid 2px #008; color: #000; background-color: #fff;
+	position: absolute; padding: 0px; top: 50px; right: 50px;
+	width: 400px;
+	z-index: 99;
+	white-space: nowrap;
+	text-align: center;
+}
+
+#engineStaffAlertForm div { padding: 5px; }
+
+#engineStaffAlertForm h3 { margin: 0px 0px 3px 0px; color: #fff; background-color: #008; 
+}
+
+/* reports */
+.reportHeader, .reportFooter { background-color: #afefaf; }
+
+div.client_elevated_concern { border: solid red 1px; 
+	background-color: #ffefef;
+}
+
+div.client_elevated_concern_short {
+	border: solid red 2px;
+	background-color: #ffafaf;
+}
+
+/* Test Warning Box */
+.agencyTestWarning {
+	background-color: red;
+	text-align: center;
+	width:100%; 
+	padding: 10px;
+}
+
+/* Confidentiality Box */
+.confidentialBox {
+	background-color: #EEEEEE;
+	border: solid black 2px;
+	text-align: center;
+	padding: 2px;
+/* 	style: clear: both; */
+}
+
+/* Logos */
+.logo {
+	padding: 0px;
+	border: 0px;
+	vertical-align: top;
+	border-spacing: 0px;
+}
+
+.myAlert {
+	background-color: #FFAAAA;
+}
+
+.menuLink {
+	font-size: 65%;
+}
